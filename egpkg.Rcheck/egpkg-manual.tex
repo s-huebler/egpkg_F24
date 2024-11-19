@@ -1,0 +1,124 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `egpkg'}}
+\par\bigskip{\large \today}
+\end{center}
+\inputencoding{utf8}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdftitle = {egpkg: What the Package Does in One 'Title Case' Line}}}{}
+\begin{description}
+\raggedright{}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{What the Package Does in One 'Title Case' Line}
+\item[Version]\AsIs{1.0}
+\item[Date]\AsIs{2023-02-23}
+\item[Author]\AsIs{Your Name}
+\item[Maintainer]\AsIs{Your Name }\email{your@email.com}\AsIs{}
+\item[Description]\AsIs{One paragraph description of what the package does as
+one or more full sentences.}
+\item[License]\AsIs{GPL (>= 2)}
+\item[Imports]\AsIs{Rcpp, graphics}
+\item[LinkingTo]\AsIs{Rcpp}
+\item[Roxygen]\AsIs{list(markdown = TRUE)}
+\item[RoxygenNote]\AsIs{7.2.3}
+\item[Encoding]\AsIs{UTF-8}
+\item[Suggests]\AsIs{testthat (>= 3.0.0)}
+\item[Config/testthat/edition]\AsIs{3}
+\item[NeedsCompilation]\AsIs{yes}
+\item[Archs]\AsIs{x64}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{myplot}{myplot}{myplot}
+%
+\begin{Description}
+myplot
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+myplot(x, y)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] a numeric vector
+
+\item[\code{y}] a numeric vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+a plot
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+# Here is an example
+set.seed(312)
+x <- rnorm(100)
+y <- rnorm(100)
+myplot(x, y)
+
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{ps\_matchCPP}{Propensity score match from Rcpp}{ps.Rul.matchCPP}
+%
+\begin{Description}
+Propensity score match from Rcpp
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+ps_matchCPP(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] a numeric vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list with two vectors (\code{match\_id}, \code{match\_x}).
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+ps_matchCPP(runif(10, 0.0, 1.0))
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{rcpp\_hello\_world}{Hello world from Rcpp}{rcpp.Rul.hello.Rul.world}
+%
+\begin{Description}
+Hello world from Rcpp
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+rcpp_hello_world()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Value}
+A list with two vectors (\code{x}, \code{y}).
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+rcpp_hello_world()
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}

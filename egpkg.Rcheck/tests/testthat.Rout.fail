@@ -1,0 +1,56 @@
+
+R version 4.3.0 (2023-04-21 ucrt) -- "Already Tomorrow"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # This file is part of the standard setup for testthat.
+> # It is recommended that you do not modify it.
+> #
+> # Where should you do additional test configuration?
+> # Learn more about the roles of various files in:
+> # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
+> # * https://testthat.r-lib.org/articles/special-files.html
+> 
+> library(testthat)
+Warning message:
+package 'testthat' was built under R version 4.3.2 
+> library(egpkg)
+> 
+> test_check("egpkg")
+[ FAIL 1 | WARN 0 | SKIP 0 | PASS 1 ]
+
+══ Failed tests ════════════════════════════════════════════════════════════════
+── Failure ('test-ps_matchCPP.R:18:3'): ps works ───────────────────────────────
+ps_matchR(x) (`actual`) not equal to ps_matchCPP(x) (`expected`).
+
+  `actual$match_id[5:20]`: 16 13 8  7 15  5 13 16  6 19 and 6 more...
+`expected$match_id[5:20]`: 16 13 8 14 15 16 13 16 18 19           ...
+
+     actual$match_x | expected$match_x               
+ [5] 0.02           | 0.02             [5]           
+ [6] 0.33           | 0.33             [6]           
+ [7] 0.67           | 0.67             [7]           
+ [8] 0.64           - 0.72             [8]           
+ [9] 0.91           | 0.91             [9]           
+[10] 0.04           - 0.02             [10]          
+[11] 0.33           | 0.33             [11]          
+[12] 0.02           | 0.02             [12]          
+[13] 0.31           - 0.27             [13]          
+[14] 0.73           | 0.73             [14]          
+ ... ...              ...              and 6 more ...
+
+[ FAIL 1 | WARN 0 | SKIP 0 | PASS 1 ]
+Error: Test failures
+Execution halted

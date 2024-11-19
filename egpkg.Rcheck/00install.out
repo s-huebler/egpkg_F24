@@ -1,0 +1,19 @@
+* installing *source* package 'egpkg' ...
+** using staged installation
+** libs
+using C++ compiler: 'G__~1.EXE (GCC) 12.3.0'
+g++ -std=gnu++17  -I"C:/PROGRA~1/R/R-43~1.0/include" -DNDEBUG  -I'C:/Users/u1477302/AppData/Local/R/win-library/4.3/Rcpp/include'   -I"C:/RBuildTools/4.3/x86_64-w64-mingw32.static.posix/include"     -O2 -Wall  -mfpmath=sse -msse2 -mstackrealign  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17  -I"C:/PROGRA~1/R/R-43~1.0/include" -DNDEBUG  -I'C:/Users/u1477302/AppData/Local/R/win-library/4.3/Rcpp/include'   -I"C:/RBuildTools/4.3/x86_64-w64-mingw32.static.posix/include"     -O2 -Wall  -mfpmath=sse -msse2 -mstackrealign  -c ps_matchCPP.cpp -o ps_matchCPP.o
+g++ -std=gnu++17  -I"C:/PROGRA~1/R/R-43~1.0/include" -DNDEBUG  -I'C:/Users/u1477302/AppData/Local/R/win-library/4.3/Rcpp/include'   -I"C:/RBuildTools/4.3/x86_64-w64-mingw32.static.posix/include"     -O2 -Wall  -mfpmath=sse -msse2 -mstackrealign  -c rcpp_hello_world.cpp -o rcpp_hello_world.o
+g++ -std=gnu++17 -shared -s -static-libgcc -o egpkg.dll tmp.def RcppExports.o ps_matchCPP.o rcpp_hello_world.o -LC:/RBuildTools/4.3/x86_64-w64-mingw32.static.posix/lib/x64 -LC:/RBuildTools/4.3/x86_64-w64-mingw32.static.posix/lib -LC:/PROGRA~1/R/R-43~1.0/bin/x64 -lR
+installing to C:/Users/u1477302/ONEDRI~1/Classes/ADV_R_~1/EGPKG_~1/EGPKG~1.RCH/00LOCK-egpkg/00new/egpkg/libs/x64
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (egpkg)
