@@ -1,11 +1,14 @@
 
 #include <Rcpp.h>
+#include <random>
 using namespace Rcpp;
 
 //' Propensity score match from Rcpp
 //' @name ps_matchCPP
 //' @return A list with two vectors (`match_id`, `match_x`).
 //' @param x a numeric vector
+//' @examples
+//' ps_matchCPP(runif(10, 0.0, 1.0))
 //' @export
  // [[Rcpp::export]]
 List ps_matchCPP(const NumericVector & x){
@@ -39,4 +42,5 @@ List ps_matchCPP(const NumericVector & x){
     Named("match_x") = match_x
   );
 }
+
 

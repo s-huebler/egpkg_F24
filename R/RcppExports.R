@@ -5,6 +5,8 @@
 #' @name ps_matchCPP
 #' @return A list with two vectors (`match_id`, `match_x`).
 #' @param x a numeric vector
+#' @examples
+#' ps_matchCPP(runif(10, 0.0, 1.0))
 #' @export
 ps_matchCPP <- function(x) {
     .Call(`_egpkg_ps_matchCPP`, x)

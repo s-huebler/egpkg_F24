@@ -15,3 +15,6 @@ A list with two vectors (\code{match_id}, \code{match_x}).
 \description{
 Propensity score match from Rcpp
 }
+\examples{
+ps_matchCPP(runif(10, 0.0, 1.0))
+}
