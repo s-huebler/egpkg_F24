@@ -17,3 +17,19 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(egpkg)
 ```
+
+```{r}
+set.seed(312)
+x <- rnorm(100)
+y <- rnorm(100)
+
+myplot(x,y)
+```
+
+```{r}
+knitr::include_graphics(
+  
+  system.file("Parcka_logo.png", package = "egpkg")
+)
+```
+
