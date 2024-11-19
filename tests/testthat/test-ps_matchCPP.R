@@ -15,5 +15,6 @@ test_that("ps works", {
 
   }
 
+
   expect_equal(ps_matchR(x), ps_matchCPP(x))
 })
